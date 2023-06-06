@@ -1,4 +1,4 @@
-vim:fileencoding=utf-8:foldmethod=marker
+# vim:fileencoding=utf-8:foldmethod=marker
 
 #: Fonts {{{
 
@@ -6,10 +6,12 @@ vim:fileencoding=utf-8:foldmethod=marker
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-font_family     Hack NFM
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
+font_family      Hack NFM Regular
+bold_font        Hack NFM Bold 
+italic_font      Hack NFM Italic 
+bold_italic_font Hack NFM Bold Italic
+
+# font_features FiraCode-Retina +zero +onum
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. To get a full list of supported fonts use the `kitty
@@ -27,7 +29,49 @@ bold_italic_font auto
 font_size 16.0
 
 #: Font size (in pts)
-force_ltr no
+# force_ltr yes
+
+# 添加ansi码
+map ctrl+' send_text all \x1b[39;5u
+map ctrl+( send_text all \x1b[40;5u
+map ctrl+) send_text all \x1b[41;5u
+map ctrl+, send_text all \x1b[44;5u
+map ctrl+- send_text all \x1b[45;5u
+map ctrl+. send_text all \x1b[46;5u
+map ctrl+; send_text all \x1b[59;5u
+map ctrl+= send_text all \x1b[61;5u
+map ctrl+/ send_text all \x1b[47;5u
+map ctrl+~ send_text all \x1b[126;5u
+map ctrl+` send_text all \x1b[96;5u
+
+macos_option_as_alt yes
+
+# 右键打开连接
+mouse_map ctrl+left press ungrabbed,grabbed mouse_click_url
+
+open_url_with default
+
+copy_on_select yes
+
+# term xterm-kitty
+
+# background_opacity 0.7
+
+# map ctrl+shift+c copy_to_clipboard
+# map cmd+c copy_to_clipboard 
+
+# map ctrl+shift+v paste_from_clipboard
+# map cmd+v paste_from_clipboard 
+
+# map cmd+plus change_font_size all +2.0 
+# map cmd+equal change_font_size all +2.0 
+# map shift+cmd+equal change_font_size all +2.0 
+# map cmd+minus change_font_size all -2.0 
+# map shift+cmd+minus change_font_size all -2.0 
+# map cmd+0 change_font_size all 0
+
+# map ctrl+shift+s paste_from_selection
+# map shift+insert paste_from_selection
 
 #: kitty does not support BIDI (bidirectional text), however, for RTL
 #: scripts, words are automatically displayed in RTL. That is to say,
@@ -2340,3 +2384,9 @@ force_ltr no
 #: }}}
 
 #: }}}
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME
