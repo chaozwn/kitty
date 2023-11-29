@@ -54,3 +54,9 @@ scrollback_lines 2000
 allow_remote_control yes
 
 include current-theme.conf
+
+
+# BEGIN_KITTY_THEME
+# One Dark
+include current-theme.conf
+# END_KITTY_THEME
