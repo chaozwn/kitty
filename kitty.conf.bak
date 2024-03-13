@@ -1,16 +1,22 @@
+allow_remote_control yes
+
+symbol_map U+EA93,U+EA8C,U+EA8C,U+EA8C,U+EB5F,U+EA88,U+EB5B,U+EB61,U+EA8B,U+EB65,U+EA96,U+EA95,U+EA95,U+EB62,U+EB66,U+EB5C,U+EA7B,U+EA94,U+EA83,U+EA95,U+EB5D,U+EA91,U+EA86,U+EB64,U+EA92 codicon
+
+# Solarized Dark Higher Contrast
 # font 
-font_family      JetBrainsMono Nerd Font Mono Regular
-bold_font        JetBrainsMono Nerd Font Mono Bold 
-italic_font      JetBrainsMono Nerd Font Mono Italic
-bold_italic_font JetBrainsMono Nerd Font Mono Bold Italic
+font_family      JetBrainsMonoNL Nerd Font Mono Regular
+bold_font        JetBrainsMonoNL Nerd Font Mono Bold 
+italic_font      JetBrainsMonoNL Nerd Font Mono Italic
+bold_italic_font JetBrainsMonoNL Nerd Font Mono Bold Italic
 
 font_features FiraCode-Bold +zero +onum
 font_size 16.5
 
 # UI
 cursor_shape block
-term tmux-256color
+term xterm-256color
 background_opacity 0.90
+background_blur 20
 remember_window_size yes
 hide_window_decorations titlebar-only
 confirm_os_window_close 0
@@ -57,6 +63,6 @@ include current-theme.conf
 
 
 # BEGIN_KITTY_THEME
-# One Dark
+# Challenger Deep
 include current-theme.conf
 # END_KITTY_THEME
