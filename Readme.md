@@ -4,6 +4,14 @@
 defaults write -g NSWindowShouldDragOnGesture YES
 ```
 
+## suggested shell alias
+
+```shell
+alias icat="kitten icat"
+alias s="kitten ssh"
+alias d="kitten diff"
+```
+
 then `ctrl` + `cmd` to drag
 
 ### use kitty diff in .gitconfig
